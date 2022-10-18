@@ -9,10 +9,7 @@ import styleEight from '../public/images/style_08.jpg'
 import styleNine from '../public/images/style_09.jpg'
 import styleTen from '../public/images/style_10.jpg'
 
-export const themes = [
-  'dark',
-  'light',
-]
+export const themes = ['dark', 'light']
 
 export const styles = [
   {
@@ -71,4 +68,8 @@ export const styles = [
   },
 ]
 
-export const ML_BASE_URL = 'https://styfer-ml-production-xovnyowcqa-et.a.run.app/'
+export const ML_BASE_URL = process.env.ML_BASE_URL
+export const BE_BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? process.env.BE_BASE_URL_PROD
+    : process.env.BE_BASE_URL_TEST

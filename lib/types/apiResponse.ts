@@ -4,3 +4,5 @@ export interface TransferResponse {
   status_code: number;
   stylized_image: string;
 }
+
+export type BackendResponse = Record<string, unknown>;
